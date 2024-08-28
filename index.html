@@ -18,16 +18,40 @@
             </div>
         </head>
             <body>
-                <img src="image\indian.jpg " width="300" height="300">
+                <img src="indian.jpg" width="300" height="300">
                 <br>
 
                 <a href="https://youtu.be/dQw4w9WgXcQ?si=6Vp7YwLGTtcVRIGR"> Click Now To Find Out Your Future </a>
                 <ul>
-                    <li> Age </li>
-                    <li>Birth Date</li>
+                    <li> birthday </li>
+                    <li>Full Name</li>
                     <li>Bank Account Number</li>
+                    <li>Favorite Color</li>
                   </ul>
+              
+                  <form>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday">
+                    <br>
+
+                    <label for="fname"> Full Name (with space):</label>
+                    <input type="text" id="fname" name="fname"><br>
+
+                
+                      <label for="bank account number"> bank account number:</label>
+                      <input type="text" required id="bankaccountnumber" name="bank account number"
+                      pattern=".{12,}" title="12 or more characters"> 
+                      
+                      <br>
+                  
+
+                    <label for="favcolor">Select your favorite color:</label>
+                   <input type="color" id="favcolor" name="favcolor"> <br>
+
+                   <input type="submit" value="Submit">
+                  </form>
 
             </body>
+      
 
     </html>
