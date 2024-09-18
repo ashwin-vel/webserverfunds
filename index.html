@@ -18,6 +18,19 @@
                   }
                 </script>
 
+        <script>
+          function Imagechange() {
+            document.getElementById("scam").src = "mem.jpg";
+          }
+        </script>
+        
+
+        <script>
+        function changeText(id) {
+          id.innerHTML = "Confirmed Toronto Supporter";
+        }
+        </script>
+        
         </head>
             <body>
               <div>
@@ -46,24 +59,41 @@
                     <li>Bank Account Number</li>
                     <li>Favorite Color</li>
                   </ul>
-              
+            
                   <form>
                     <label for="birthday">Birthday:</label>
                     <input type="date" id="birthday" name="birthday">
                     <br>
 
-                    <label for="fname"> Full Name (with space):</label>
-                    <input type="text" id="fname" name="fname"><br>
+                    <label for="fname">Full Name (with space):</label>
+                    <input type="text" onblur="blu()" id="fname" name="fnames">
+                    
+                    <p id="message"></p>
+                    
+                    <script>
+                      function blu() {
+                        var x = document.getElementById("fname").value;
+                        var message = document.getElementById("message");
+                    
+                        if (x == "") {
+                          message.innerHTML = "This Field IS REQUIRED";
+                          return false;
+                        } else {
+                          message.innerHTML = "";
+                        }
+                      }
+                    </script>
+                    
 
-                
+                        <br>
                       <label for="bank account number"> bank account number:</label>
                       <input type="text" required id="bankaccountnumber" name="bank account number"
                       pattern=".{12,}" title="12 or more characters"> 
                       
-                      <br>
+                <br>
                   
 
-                    <label for="favcolor">Select your favorite color:</label>
+                    <label for="favcolor">Select your favorite color:</label> <br>
                    <input type="submit" value="Submit">
                    <button onclick="alert('!Warning! Your RBC Account has locked for suspicious Activity, please Call 1 666 694 2069');" >Sign In </button> <br>
 
@@ -76,11 +106,21 @@
             
 
                   </form>
+                  <img id="scam" src="scam.jpg" width="227" height="208">
 
-                  
+                  <p>
+                    To change the below image 
+                    <br>
+                    Click on the "Change Image" Button Below
+                 </p>
+                 <button onclick="Imagechange()">Change Image</button>
+
+
+
                   <p>Click to find out the best City in Canada dispear and come back </p> <br>
-                  <button onclick="Toggler()">Try it</button>
+                  <button onclick="Toggler()">Try it</button> <br>
 
+                  <p onclick="changeText(this)"> Click on this Text </p>
                   <div id="city">
                     Toronto is the best City 
                   </div>
