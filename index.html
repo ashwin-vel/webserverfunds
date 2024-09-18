@@ -6,6 +6,19 @@
                    function clickonit() {document.getElementById("exit").innerHTML = "Thank You For Signing out"}
 
             </script>
+            <script>
+              <script>
+                  function Toggler() {
+                    var x = document.getElementById("city");
+                    if (x.style.display === "none") {
+                      x.style.display = "block";
+                    } else {
+                      x.style.display = "none";
+                    }
+                  }
+                </script>
+
+            </script>
         </head>
             <body>
               <div>
@@ -59,12 +72,10 @@
 
 
                    <p id="exit"> Please Sign Out</p>
-                   <button onclick="clickonit()";>
-                    Sign Out</button>
-                   
+                   <button onclick="clickonit()";> Sign Out</button>
+                   <p id="city"> Toronto is the best city </p>
+                   <button onclick="Toggler()">Try it</button>
                  
-
-                    
 
             
 
