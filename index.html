@@ -2,6 +2,7 @@
     <html>
         <head>
           
+          
             <script>
                    function clickonit() {document.getElementById("exit").innerHTML = "Thank You For Signing out"}
 
@@ -18,6 +19,8 @@
                   }
                 </script>
 
+
+
         <script>
           function Imagechange() {
             document.getElementById("scam").src = "mem.jpg";
@@ -29,8 +32,23 @@
         function changeText(id) {
           id.innerHTML = "Confirmed Toronto Supporter";
         }
-        </script>
+
+
         
+        </script>
+        <script>
+         function filefetch() {
+          getText("myfile.txt")
+          async function getText(file) {
+          let x = await fetch(file);
+          let y = await x.text();
+          document.getElementById("text").innerHTML = y;
+          }   
+        }   
+          
+
+        </script>
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=6Vp7YwLGTtcVRIGR"> Click Now To Find Out Your Future </a>
         </head>
             <body>
               <div>
@@ -52,7 +70,7 @@
                 <img src="indian.jpg" width="300" height="300">
                 <br>
 
-                <a href="https://youtu.be/dQw4w9WgXcQ?si=6Vp7YwLGTtcVRIGR"> Click Now To Find Out Your Future </a>
+                
                 <ul>
                     <li> birthday </li>
                     <li>Full Name</li>
@@ -124,6 +142,9 @@
                   <div id="city">
                     Toronto is the best City 
                   </div>
+                  <p id="text">Fetch a file to change this text.</p>
+                  <button onclick="filefetch()">fetch file</button> <br>
+
             </body>
       
 
