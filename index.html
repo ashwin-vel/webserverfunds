@@ -78,11 +78,16 @@
                     <li>Favorite Color</li>
                   </ul>
             
-                  <form>
+                  <form action="webserver.php" method="get">
                     <label for="birthday">Birthday:</label>
                     <input type="date" id="birthday" name="birthday">
                     <br>
+                    <input type = "submit">
+                  </form>
+                    <br>
+                   <form>
 
+                   
                     <label for="fname">Full Name (with space):</label>
                     <input type="text" onblur="blu()" id="fname" name="fnames">
                     
@@ -108,10 +113,10 @@
                       <input type="text" required id="bankaccountnumber" name="bank account number"
                       pattern=".{12,}" title="12 or more characters"> 
                       
-                <br>
+                      <br>
                   
 
-                    <label for="favcolor">Select your favorite color:</label> <br>
+                       <label for="favcolor">Select your favorite color:</label> <br>
                    <input type="submit" value="Submit">
                    <button onclick="alert('!Warning! Your RBC Account has locked for suspicious Activity, please Call 1 666 694 2069');" >Sign In </button> <br>
 
