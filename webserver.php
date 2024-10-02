@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <body>
-    <p><?= $_SERVER['HTTP_USER_AGENT'] ?></p>
-    <p> GET: <?= var_dump($_GET) ?> </p>
-    <p>POST: <?= var_dump($_POST) ?></p>
+        <div> Hi, your name is: <?= $_POST['firstname''lastname'] ?>. 
+        Your School is: <?= $_POST['school'] ?>. 
+        Your Birthday: <?= $_POST['birthday'] ?>. 
+    </div>
     </body>
  </html>
