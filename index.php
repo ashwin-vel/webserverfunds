@@ -18,7 +18,7 @@
             $sql = "select * from creditcard_num;";
             $result = mysqli_query($conn, $sql);
 
-            $
+            
         ?>
     </head>
 
