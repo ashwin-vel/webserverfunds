@@ -2,7 +2,24 @@
     <html>
         <head>
           
-          
+        <head>
+        <title>SQL test</title>
+        <?php
+            $server = "localhost";
+            $username = "kevin";
+            $password = "kevin05";
+            $database = "scamdb";
+            $conn = mysqli_connect($server, $username, $password, $database);
+            
+            // Check for successful connection
+            if (!$conn) {
+              die("Connection failed: {mysqli_connect_error()}");
+            }
+            $sql = "select * from creditcard_num;";
+            $result = mysqli_query($conn, $sql);
+        ?>
+    </head>
+
             <script>
                    function clickonit() {document.getElementById("exit").innerHTML = "Thank You For Signing out"}
 
@@ -77,7 +94,21 @@
                     <li>Bank Account Number</li>
                     <li>Favorite Color</li>
                   </ul>
-                  
+       <form action="webserver.php" method="get">
+            <label for="bankname">Select a course:</label><br/>
+            <select id="bankname" name="bankname">
+                <?php
+                    foreach($result as $row) 
+                    {
+                        echo "<option value='{$row['bankname']}'>{$row['bankname']}</option>\n";
+                    }
+                    // Don't forget to close the connection!
+                    mysqli_close($conn);
+                ?>
+            </select>
+            <br/>
+            <input type="submit" value="submit"/>  
+        </form>
                  
                   <form action="webserver.php" method="post">
                     <label for="firstname"> First Name:</label>

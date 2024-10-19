@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html>
+    
+<head>
+        <title>SQL test</title>
+        <?php
+            $server = "localhost";
+            $username = "php";
+            $password = "php_password";
+            $database = "testdb";
+            $conn = mysqli_connect($server, $username, $password, $database);
+            
+            // Check for successful connection
+            if (!$conn) {
+              die("Connection failed: {mysqli_connect_error()}");
+            }
+            $sql = "select custname from creditcard_num where bank_name='{$bank_name}';";
+            $result = mysqli_query($conn, $sql)
+        ?>
+    </head>
+
     <body>
-        <div> Hi, your name is: <?= "Hello, " . htmlspecialchars($_POST['firstname'] )  . " " .  htmlspecialchars($_POST['lastname']) .""?>. 
-        <br>
-        Your School is: <?= htmlspecialchars($_POST['school']) ?>. 
-        <br>
-        Your Birthday: <?= htmlspecialchars($_POST['birthday']) ?>. 
-    </div>
+        You selected a bank <?= $bank_name ?>.<br/>
+        <?php
+            foreach($result as $row) // There should only be one row returned!
+            {
+                echo "{$row['custname']} has {$row['num_students']} bank. \n";
+            }
+            // Don't forget to close the connection!
+            mysqli_close($conn);
+        ?>
     </body>
+
+
+
+
+
+
+
  </html>
