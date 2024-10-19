@@ -6,7 +6,7 @@
         <?php
             $server = "localhost";
             $username = "kevin";
-            $password = "kevin";
+            $password = "kevin05";
             $database = "scamdb";
             $conn = mysqli_connect($server, $username, $password, $database);
             
