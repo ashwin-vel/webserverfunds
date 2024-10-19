@@ -22,11 +22,11 @@
     </head>
 
     <body>
-        You selected a bank <?= $bankname ?>.<br/>
+        You selected a bank <?= $bank_name ?>.<br/>
         <?php
             foreach($result as $row) // There should only be one row returned!
             {
-                echo "{$row['custname']} has {$row['num_students']} bank. \n";
+                echo "{$row['custname']} has {$row['bank_name']} bank. \n";
             }
             // Don't forget to close the connection!
             mysqli_close($conn);
