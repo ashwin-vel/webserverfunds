@@ -32,11 +32,11 @@
     <body>
         You selected a  <?= $bank_name ?> bank.<br/>
     
-             <div>  Hi, you have  added this to the SCAM database Yoopie! is: <?= htmlspecialchars($_POST['custo'] ) ?>.
+             <div>  Hi, you have  added this to the SCAM database Yoopie! is: <?= htmlspecialchars($GET['custo'] ) ?>.
              <br>
-             The Added Sin Number is: <?= htmlspecialchars($_POST['sinnum1']) ?>. 
+             The Added Sin Number is: <?= htmlspecialchars($_GET['sinnum1']) ?>. 
              <br>
-            The added bank is: <?= htmlspecialchars($_POST['banknam1']) ?>. 
+            The added bank is: <?= htmlspecialchars($_GET['banknam1']) ?>. 
             
        
 
