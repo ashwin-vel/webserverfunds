@@ -5,9 +5,9 @@
         <title>SQL test</title>
         <?php
             $server = "localhost";
-            $username = "php";
-            $password = "php_password";
-            $database = "testdb";
+            $username = "kevin";
+            $password = "kevin";
+            $database = "scamdb";
             $conn = mysqli_connect($server, $username, $password, $database);
             
             // Check for successful connection
