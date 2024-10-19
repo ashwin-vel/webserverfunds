@@ -22,7 +22,7 @@
     </head>
 
     <body>
-        You selected a bank <?= $bank_name ?>.<br/>
+        You selected a  <?= $bank_name ?> bank.<br/>
         <?php
             foreach($result as $row) // There should only be one row returned!
             {
