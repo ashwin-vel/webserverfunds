@@ -5,6 +5,9 @@
         <title>SQL test</title>
         <?php
             $bank_name = htmlspecialchars($_GET["bank_name"]); 
+            $banknam = htmlspecialchars($_GET["banknam"]); 
+            $custo = htmlspecialchars($_GET["custname"]); 
+            $sin = htmlspecialchars($_GET["sinnum"]); 
 
             $server = "localhost";
             $username = "kevin";
@@ -18,6 +21,9 @@
             }
             $sql = "select custname, sinnum from creditcard_num where bank_name='{$bank_name}';";
             $result = mysqli_query($conn, $sql);
+
+            $sql1 = "INSERT INTO creditcard_num (custname, sinnum, bank_name ) VALUES ('$custo',$sin,'$banknam');";
+            $result1 = mysqli_query($conn, $sql1);
         ?>
     </head>
 

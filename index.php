@@ -17,6 +17,8 @@
             }
             $sql = "select * from creditcard_num;";
             $result = mysqli_query($conn, $sql);
+
+            $
         ?>
     </head>
 
@@ -94,7 +96,7 @@
                     <li>Favorite Color</li>
                   </ul>
        <form action="webserver.php" method="get">
-            <label for="bank_name">Select a course:</label><br/>
+            <label for="bank_name">Select a Bank:</label><br/>
             <select id="bank_name" name="bank_name">
                 <?php
                     foreach($result as $row) 
@@ -108,7 +110,16 @@
             <br/>
             <input type="submit" value="submit"/>  
         </form>
-                 
+        <form action="webserver.php" method="get">
+            <label for="custname">Enter Customer Name:</label><br/>
+            <input type="text"  name="custo"> 
+            <label for="sinnum">Enter Sin Num:</label><br/>
+            <input type="text"  name="sinnum"> 
+            <label for="banknam">Enter Bank Name:</label><br/>
+            <input type="text"  name="banknam"> 
+            <br/>
+            <input type="submit" value="submit"/>  
+        </form>
                   <form action="webserver.php" method="post">
                     <label for="firstname"> First Name:</label>
                     <br>
