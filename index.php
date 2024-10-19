@@ -117,8 +117,8 @@
             <label for="sinnum1">Enter Sin Num:</label>
             <input type="text"  name="sinnum1"> 
             <br/>
-            <label for="banknam">Enter Bank Name:</label>
-            <input type="text"  name="banknam"> 
+            <label for="banknam1">Enter Bank Name:</label>
+            <input type="text"  name="banknam1"> 
             <input type="submit" value="submit"/>  
             <br/>
         </form>

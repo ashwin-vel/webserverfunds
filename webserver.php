@@ -32,7 +32,8 @@
     <body>
         You selected a  <?= $bank_name ?> bank.<br/>
     
-             <div>  Hi, you have  added this to the SCAM database Yoopie! is: <?= htmlspecialchars($GET['custo'] ) ?>.
+             <div>  Hi, you have  added these to the SCAM database Yoopie! is: 
+             Customer Name: <?= htmlspecialchars($_GET['custo'] ) ?>.
              <br>
              The Added Sin Number is: <?= htmlspecialchars($_GET['sinnum1']) ?>. 
              <br>
