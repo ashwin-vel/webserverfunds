@@ -6,7 +6,7 @@
         <?php
             $bank_name = htmlspecialchars($_GET["bank_name"]); 
             $banknam = htmlspecialchars($_GET["banknam"]); 
-            $custo = htmlspecialchars($_GET["custname"]); 
+            $custo = htmlspecialchars($_GET["custo"]); 
             $sin = htmlspecialchars($_GET["sinnum"]); 
 
             $server = "localhost";
@@ -37,7 +37,20 @@
             // Don't forget to close the connection!
             mysqli_close($conn);
         ?>
+
+
+    <?php
+            foreach($result1 as $row) // There should only be one row returned!
+            {
+                echo "{$row['custname']} has {$row['bank_name']} and his SIN number is {$row['sinnum']} . \n";
+            }
+            // Don't forget to close the connection!
+            mysqli_close($conn);
+        ?>
     </body>
+
+
+
 
 
 

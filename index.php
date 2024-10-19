@@ -111,7 +111,7 @@
             <input type="submit" value="submit"/>  
         </form>
         <form action="webserver.php" method="get">
-            <label for="custname">Enter Customer Name:</label><br/>
+            <label for="custo">Enter Customer Name:</label><br/>
             <input type="text"  name="custo"> 
             <label for="sinnum">Enter Sin Num:</label><br/>
             <input type="text"  name="sinnum"> 
