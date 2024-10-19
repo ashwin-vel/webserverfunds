@@ -81,8 +81,7 @@
                   Dont miss out on the cosmic insights that could change your life. 
                   Click now and let the universe reveal your destiny! ✨🔮
                 </p>
-  
-              </div>
+                </div>
                   
                 <img src="images/indian.jpg" width="300" height="300">
                 <br>
@@ -95,12 +94,12 @@
                     <li>Favorite Color</li>
                   </ul>
        <form action="webserver.php" method="get">
-            <label for="bankname">Select a course:</label><br/>
-            <select id="bankname" name="bankname">
+            <label for="bank_name">Select a course:</label><br/>
+            <select id="bank_name" name="bank_name">
                 <?php
                     foreach($result as $row) 
                     {
-                        echo "<option value='{$row['bankname']}'>{$row['bankname']}</option>\n";
+                        echo "<option value='{$row['bank_name']}'>{$row['bank_name']}</option>\n";
                     }
                     // Don't forget to close the connection!
                     mysqli_close($conn);
