@@ -26,7 +26,7 @@
         <?php
             foreach($result as $row) // There should only be one row returned!
             {
-                echo "{$row['custname']} has $bank_name and his SIN number is $row['sinnum'] . \n";
+                echo "{$row['custname']} has $bank_name and his SIN number is {$row['sinnum']} . \n";
             }
             // Don't forget to close the connection!
             mysqli_close($conn);
