@@ -16,7 +16,7 @@
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "select custname from creditcard_num where bank_name='{$bank_name}';";
+            $sql = "select custname, sinnum from creditcard_num where bank_name='{$bank_name}';";
             $result = mysqli_query($conn, $sql);
         ?>
     </head>
@@ -26,7 +26,7 @@
         <?php
             foreach($result as $row) // There should only be one row returned!
             {
-                echo "{$row['custname']} has {$row['bank_name']} bank. \n";
+                echo "{$row['custname']} has $bank_name and his SIN number is $row['sinnum'] . \n";
             }
             // Don't forget to close the connection!
             mysqli_close($conn);
