@@ -103,7 +103,7 @@
                     {
                         echo "<option value='{$row['bank_name']}'>{$row['bank_name']}</option>\n";
                     }
-                    // Don't forget to close the connection!
+                    // Don't forget to close the connection!b
                     mysqli_close($conn);
                 ?>
             </select>
@@ -112,16 +112,15 @@
         </form>
         <form action="webserver.php" method="get">
             <label for="custo">Enter Customer Name:</label>
-            <br/>
             <input type="text"  name="custo"> 
+            <br/>
             <label for="sinnum1">Enter Sin Num:</label>
-            <br/>
             <input type="text"  name="sinnum1"> 
+            <br/>
             <label for="banknam">Enter Bank Name:</label>
-            <br/>
             <input type="text"  name="banknam"> 
-            <br/>
             <input type="submit" value="submit"/>  
+            <br/>
         </form>
                   <form action="webserver.php" method="post">
                     <label for="firstname"> First Name:</label>
