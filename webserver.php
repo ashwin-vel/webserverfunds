@@ -14,13 +14,13 @@
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "select custname from creditcard_num where bank_name='{$bank_name}';";
+            $sql = "select custname from creditcard_num where bank_name='{$bankname}';";
             $result = mysqli_query($conn, $sql);
         ?>
     </head>
 
     <body>
-        You selected a bank <?= $bank_name ?>.<br/>
+        You selected a bank <?= $bankname ?>.<br/>
         <?php
             foreach($result as $row) // There should only be one row returned!
             {
