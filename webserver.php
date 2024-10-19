@@ -15,7 +15,7 @@
               die("Connection failed: {mysqli_connect_error()}");
             }
             $sql = "select custname from creditcard_num where bank_name='{$bank_name}';";
-            $result = mysqli_query($conn, $sql)
+            $result = mysqli_query($conn, $sql);
         ?>
     </head>
 

@@ -4,20 +4,7 @@
           
         <head>
         <title>SQL test</title>
-        <?php
-            $server = "localhost";
-            $username = "kevin";
-            $password = "kevin05";
-            $database = "scamdb";
-            $conn = mysqli_connect($server, $username, $password, $database);
-            
-            // Check for successful connection
-            if (!$conn) {
-              die("Connection failed: {mysqli_connect_error()}");
-            }
-            $sql = "select * from creditcard_num;";
-            $result = mysqli_query($conn, $sql);
-        ?>
+        
     </head>
 
             <script>
