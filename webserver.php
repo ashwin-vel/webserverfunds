@@ -4,6 +4,8 @@
 <head>
         <title>SQL test</title>
         <?php
+            $bank_name = htmlspecialchars($_GET["bank_name"]); 
+
             $server = "localhost";
             $username = "kevin";
             $password = "kevin05";
@@ -14,7 +16,7 @@
             if (!$conn) {
               die("Connection failed: {mysqli_connect_error()}");
             }
-            $sql = "select custname from creditcard_num where bank_name='{$bankname}';";
+            $sql = "select custname from creditcard_num where bank_name='{$bank_name}';";
             $result = mysqli_query($conn, $sql);
         ?>
     </head>
