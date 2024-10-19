@@ -5,9 +5,9 @@
         <title>SQL test</title>
         <?php
             $bank_name = htmlspecialchars($_GET["bank_name"]); 
-            $banknam = htmlspecialchars($_GET["banknam"]); 
+            $banknam = htmlspecialchars($_GET["banknam1"]); 
             $custo = htmlspecialchars($_GET["custo"]); 
-            $sin = htmlspecialchars($_GET["sinnum"]); 
+            $sin = htmlspecialchars($_GET["sinnum1"]); 
 
             $server = "localhost";
             $username = "kevin";
@@ -24,29 +24,22 @@
 
             $sql1 = "INSERT INTO creditcard_num (custname, sinnum, bank_name ) VALUES ('$custo',$sin,'$banknam');";
             $result1 = mysqli_query($conn, $sql1);
+
+            
         ?>
     </head>
 
     <body>
         You selected a  <?= $bank_name ?> bank.<br/>
-        <?php
-            foreach($result as $row) // There should only be one row returned!
-            {
-                echo "{$row['custname']} has $bank_name and his SIN number is {$row['sinnum']} . \n";
-            }
-            // Don't forget to close the connection!
-            mysqli_close($conn);
-        ?>
+    
+             <div>  Hi, you have  added this to the SCAM database Yoopie! is: <?= htmlspecialchars($_POST['custo'] ) ?>.
+             <br>
+             The Added Sin Number is: <?= htmlspecialchars($_POST['sinnum1']) ?>. 
+             <br>
+            The added bank is: <?= htmlspecialchars($_POST['banknam1']) ?>. 
+            
+       
 
-
-    <?php
-            foreach($result1 as $row) // There should only be one row returned!
-            {
-                echo "{$row['custname']} has {$row['bank_name']} and his SIN number is {$row['sinnum']} . \n";
-            }
-            // Don't forget to close the connection!
-            mysqli_close($conn);
-        ?>
     </body>
 
 

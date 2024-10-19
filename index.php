@@ -113,8 +113,8 @@
         <form action="webserver.php" method="get">
             <label for="custo">Enter Customer Name:</label><br/>
             <input type="text"  name="custo"> 
-            <label for="sinnum">Enter Sin Num:</label><br/>
-            <input type="text"  name="sinnum"> 
+            <label for="sinnum1">Enter Sin Num:</label><br/>
+            <input type="text"  name="sinnum1"> 
             <label for="banknam">Enter Bank Name:</label><br/>
             <input type="text"  name="banknam"> 
             <br/>
